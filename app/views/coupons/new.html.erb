@@ -1,13 +1,11 @@
-<h2>Coupon Form</h2>
+<h3> Coupon Form </h3>
 
-<hr>
+<%= form_tag coupons_path do %>
+  <label>Coupon Code:</label>
+  <%= text_field_tag :'coupon[coupon_code]' %> <br>
 
-<%= form_tag coupons_path%>
-<%= label_tag :coupon_code%>
-<%= text_field_tag :'coupon[coupon_code]'%>
+  <label>Store: </label>
+  <%= text_field_tag :'coupon[store]' %> <br>
 
-<%= label_tag :store%>
-<%= text_field_tag :'coupon[store]'%>
-
-<%= submit_tag "Submit Coupon"%>
-© 2020 GitHub, Inc.
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
